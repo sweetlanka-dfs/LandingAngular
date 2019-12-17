@@ -1,0 +1,43 @@
+
+header {
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.14);
+
+  .top-line {
+    font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      line-height: 19px;
+
+    .logo {
+      color: #7E72F2;
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 25px;
+      margin-left: 24px;
+    }
+
+    .nav-link {
+      color: #606060;
+    }
+
+    .buttons-auth {
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .btn-auth {
+        height: 36px;
+        width: 136px;
+        border-radius: 4px;
+        background: linear-gradient(224.53deg, #9E94FF 0%, #7E72F2 100%);
+        box-shadow: -1px 1px 8px 0 rgba(126,114,242,0.58);
+        color: #FFFFFF;
+      font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+      margin: 0 12px;
+
+    }
+
+  }
+}
