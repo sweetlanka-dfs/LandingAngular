@@ -1,6 +1,6 @@
 <header>
   <div class="top-line row">
-    <nav class="navbar navbar-expand-lg navbar-light col-7">
+    <nav class="navbar navbar-expand-lg navbar-light col-10">
       <a class="navbar-brand logo" href="#">
         SMS Termin
       </a>
@@ -8,27 +8,40 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div  class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Главная</a>
+            <a class="nav-link" href="#">{{ 'nav-menu.main' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Особенности</a>
+            <a class="nav-link" href="#">{{ 'nav-menu.features' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Цены</a>
+            <a class="nav-link" href="#">{{ 'nav-menu.price' | translate }}</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Связаться с нами</a>
+            <a class="nav-link" href="#">{{ 'nav-menu.contact' | translate }}</a>
           </li>
         </ul>
+        <div class="buttons-auth row">
+          <button type="button" class="btn btn-auth">{{ 'nav-menu.sign-in' | translate }}</button>
+          <button type="button" class="btn btn-auth">{{ 'nav-menu.log-in' | translate }}</button>
+        </div>
       </div>
     </nav>
-        <div class="buttons-auth row col-5">
-          <button type="button" class="btn btn-auth">Регистрация</button>
-          <button type="button" class="btn btn-auth">Войти</button>
-          <div><fa-icon [icon]="faCoffee"></fa-icon></div>
-        </div>
+          <div class="col-2 center">
+            <img src="../../../assets/img/language.svg" width="19" height="19">
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">RU
+                <span class="caret"></span></button>
+              <ul class="dropdown-menu" (click)="checkData($event)">
+                <li>RU</li>
+                <li><a href="#">UA</a></li>
+                <li><a href="#">EN</a></li>
+              </ul>
+            </div>
+          </div>
+  </div>
+  <div class="main-content">
   </div>
 </header>

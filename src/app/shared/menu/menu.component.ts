@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faCoffee} from '@fortawesome/free-solid-svg-icons/faCoffee';
-
-
-
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
@@ -10,10 +7,24 @@ import {faCoffee} from '@fortawesome/free-solid-svg-icons/faCoffee';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-  faCoffee = faCoffee;
-  constructor() { }
+
+  selectedDay: string = '';
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('ru');
+  }
 
   ngOnInit() {
+
+  }
+  checkData(event: any) {
+    alert("TEST");
+  debugger;
+    this.selectedDay = event.target.value;
+
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
   }
 
 }

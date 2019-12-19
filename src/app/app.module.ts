@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './shared/menu/menu.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 
 
@@ -22,9 +25,21 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import {Library, library} from '@fortawesome/fontawesome-svg-core';
-import {fas} from '@fortawesome/free-solid-svg-icons';
-library.add(fas);
+import {TranslateService} from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-root',
@@ -10,4 +9,11 @@ library.add(fas);
 })
 export class AppComponent {
   title = 'SMSTermin';
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('ru');
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

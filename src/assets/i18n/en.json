@@ -1,0 +1,10 @@
+{
+  "nav-menu": {
+    "main": "Main",
+    "features": "Features",
+    "price": "Price",
+    "contact":"Contact Us",
+    "sign-in": "Sign In",
+    "log-in": "Log In"
+  }
+}
