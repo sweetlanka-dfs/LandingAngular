@@ -1,45 +1,71 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
+
 <body>
-<div class="container-fluid custom-container-width">
-  <app-menu></app-menu>
-<section>
-  <div class="row-cols-12">
-    <h2 class="headers-lg">Особенности</h2>
-    <div class="row">
-      <div class="col-lg-3 col-3">
-        <img src="../assets/img/macbook.svg" alt="">
-      </div>
-      <div class="col-lg-9 col-9">
-        <h2 class="headers-sm">
-          1. Автоматизируйтесь
-        </h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, ex!</div>
+    <div class="container-fluid custom-container-width">
+        <app-menu></app-menu>
+        <section>
+            <div class="row-cols-12">
+                <h2 class="headers-lg">Особенности</h2>
+                <div class="row space">
+                    <div class="col-lg-4 col-12">
+                        <img src="../assets/img/automation.svg" alt="">
+                    </div>
+                    <div class="col-lg-8 col-12 features-content">
+                        <h2 class="headers-sm">
+                            1. Автоматизация
+                        </h2>
+                        <span class="features-text">Наш календарь — полезная функция, которая поможет Вам вести учет поставленных персоналу задач и отслеживать ход их выполнения.</span>
+                    </div>
+                </div>
+                <div class="row reverse space">
+                    <div class="col-lg-4 col-12 pull-right">
+                        <img src="../assets/img/notifications.svg" alt="">
+                    </div>
+                    <div class="col-lg-8 col-12 features-content">
+                        <h2 class="headers-sm">
+                            2. Уведомление по SMS
+                        </h2>
+                        <span class="features-text">Наш календарь — полезная функция, которая поможет Вам вести учет поставленных персоналу задач и отслеживать ход их выполнения.</span>
+                    </div>
+                </div>
+                <div class="row space">
+                    <div class="col-lg-4 col-12">
+                        <img src="../assets/img/confidentiality.svg" alt="">
+                    </div>
+                    <div class="col-lg-8 col-12 features-content">
+                        <h2 class="headers-sm">
+                            3. Конфиденциальность </h2>
+                        <span class="features-text">Наш календарь — полезная функция, которая поможет Вам вести учет поставленных персоналу задач и отслеживать ход их выполнения.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <!-- translation: translation pipe -->
+            <h1>{{ 'demo.title' | translate }}</h1>
+
+            <!-- translation: directive (key as attribute)-->
+            <p [translate]="'demo.text'"></p>
+
+            <!-- translation: directive (key as content of element) -->
+            <p translate>demo.text</p>
+        </div>
+        <button (click)="useLanguage('en')">en</button>
+        <button (click)="useLanguage('ru')">ru</button>
+
     </div>
-  </div>
-</section>
-  <div>
-    <!-- translation: translation pipe -->
-    <h1>{{ 'demo.title' | translate }}</h1>
-
-    <!-- translation: directive (key as attribute)-->
-    <p [translate]="'demo.text'"></p>
-
-    <!-- translation: directive (key as content of element) -->
-    <p translate>demo.text</p>
-  </div>
-  <button (click)="useLanguage('en')">en</button>
-  <button (click)="useLanguage('ru')">ru</button>
-
-</div>
-<!--<div>{{ pages | json }}</div>-->
+    <!--<div>{{ pages | json }}</div>-->
 
 
 </body>
+
 </html>
