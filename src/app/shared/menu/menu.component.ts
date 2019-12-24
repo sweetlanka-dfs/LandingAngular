@@ -9,6 +9,8 @@ import {TranslateService} from '@ngx-translate/core';
 export class MenuComponent implements OnInit {
 
   selectedDay: string = '';
+  languages: any[] = ['RU', 'EN', 'DE'];
+
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('ru');
   }
@@ -17,7 +19,6 @@ export class MenuComponent implements OnInit {
 
   }
   checkData(event: any) {
-    alert("TEST");
   debugger;
     this.selectedDay = event.target.value;
 

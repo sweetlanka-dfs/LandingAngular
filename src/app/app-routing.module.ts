@@ -4,20 +4,12 @@ import {NgModule} from '@angular/core';
 
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
-  { path: '',
-    redirectTo: '/heroes',
-    pathMatch: 'full'
-  }
-  ];
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'home', component: HomeComponent }];
+
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(
-      routes,
-      { enableTracing: true }
-    )
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-
-export class AppModule { }
+export class AppRoutingModule { }

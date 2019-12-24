@@ -1,5 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+$main-color: #6F64F8;
 
-body {
-  background-color: #F9F9F9;
+@mixin center-row {
+  display: flex;
+  justify-content: center;
 }
+
+.custom-container-width {
+  max-width: 1440px;
+
+  .headers-lg {
+    color: $main-color;
+    @include center-row;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+  }
+.headers-sm {
+  color: $main-color;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44xpx;
+
+
+}
+
+
+  img {
+    max-width: 100%;
+  }
+}
+
+

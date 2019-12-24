@@ -1,6 +1,7 @@
 <header>
-  <div class="top-line row">
-    <nav class="navbar navbar-expand-lg navbar-light col-10">
+  <div class="top-line">
+    <div class="row">
+    <nav class="navbar navbar-expand-lg navbar-light col-11">
       <a class="navbar-brand logo" href="#">
         SMS Termin
       </a>
@@ -23,25 +24,46 @@
             <a class="nav-link" href="#">{{ 'nav-menu.contact' | translate }}</a>
           </li>
         </ul>
-        <div class="buttons-auth row">
+        <div class="buttons-auth">
+          <div class="row">
           <button type="button" class="btn btn-auth">{{ 'nav-menu.sign-in' | translate }}</button>
           <button type="button" class="btn btn-auth">{{ 'nav-menu.log-in' | translate }}</button>
+            </div>
         </div>
       </div>
     </nav>
-          <div class="col-2 center">
-            <img src="../../../assets/img/language.svg" width="19" height="19">
-            <div class="dropdown">
-              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">RU
-                <span class="caret"></span></button>
+          <div class="col-1 center">
+            <div class="dropdown center">
+              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                RU<span class="caret"></span></button>
               <ul class="dropdown-menu" (click)="checkData($event)">
-                <li>RU</li>
-                <li><a href="#">UA</a></li>
-                <li><a href="#">EN</a></li>
+                <li *ngFor="let lang of languages">
+                  {{ lang }} </li>
               </ul>
             </div>
           </div>
+    </div>
   </div>
   <div class="main-content">
+      <div class="flex-center">
+        <div class="row centered-content">
+          <div class="header-info col-12 col-lg-5">
+            <h1>Вы сталкивались с тем, что клиент не пришел? А ведь своевременно напомнить клиенту о визите может программа.</h1>
+          </div>
+          <div class="col-12 col-lg-7">
+            <div>
+              <img id="macbook" src="../../../assets/img/macbook.svg" alt="">
+            </div>
+          </div>
+        </div>
+
+          <div class="bottom-content">
+            <h2>Автоматизируйте свои бизнес-процессы сейчас</h2>
+            <button class="btn-start-now"><span>Начать сейчас</span></button>
+          </div>
+
+      </div>
+
   </div>
+
 </header>

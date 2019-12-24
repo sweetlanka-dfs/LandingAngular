@@ -10,6 +10,7 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -33,7 +34,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
         useFactory: HttpLoaderFactory,
         deps: [HttpClient]
       }
-    })
+    }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

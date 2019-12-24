@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="22px" viewBox="0 0 20 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>dashboard_header_calendar_gray</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Dashboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Desktop-/-Users" transform="translate(-321.000000, -53.000000)" stroke="#606060" stroke-width="2">
+            <g id="Navbar" transform="translate(32.000000, 32.000000)">
+                <g id="calendar" transform="translate(278.000000, 14.000000)">
+                    <g id="dashboard_header_calendar_gray" transform="translate(12.000000, 8.000000)">
+                        <rect id="Rectangle" x="0" y="1.93939394" width="18" height="17.4545455" rx="2"></rect>
+                        <path d="M13,0 L13,3.87878788" id="Path"></path>
+                        <path d="M5,0 L5,3.87878788" id="Path"></path>
+                        <path d="M0,7.75757576 L18,7.75757576" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
