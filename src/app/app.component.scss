@@ -46,3 +46,69 @@ $main-color: #6F64F8;
 img {
     max-width: 100%;
 }
+
+.carousel-item {
+  &.active, &.carousel-item-right, &.carousel-item-next {
+    display: flex !important;
+  }
+}
+
+.item {
+    margin: 30px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.14);
+    h3 {
+      width: 100%;
+      color: #606060;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: center;
+     }
+
+    .qty-sms {
+      color: #606060;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    .qty {
+      color: #6F64F8;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+  .price {
+    color: #2DCD7A;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    padding: 20px 10px;
+  }
+
+  .btn-start {
+    height: 36px;
+    width: 136px;
+    border-radius: 4px;
+    background: linear-gradient(224.53deg, #9E94FF 0%, #7E72F2 100%);
+    box-shadow: -1px 1px 8px 0 rgba(126, 114, 242, 0.58);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 12px;
+  }
+
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0 30px;
+  }
+}

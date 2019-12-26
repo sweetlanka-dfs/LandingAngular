@@ -9,20 +9,19 @@ import { ApiService } from './api.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  implements OnInit{
-  // title = 'SMSTermin';
   pages: any[];
   title: string;
-  newList: any[];
+  selectedLang: string;
 
   constructor(private translate: TranslateService, private api: ApiService) {
     translate.setDefaultLang('ru');
   }
 
   ngOnInit() {
-    this.getForecastArray();
+    this.getPrices();
   }
 
-  getForecastArray() {
+  getPrices() {
     this.api.sendPostRequest().subscribe((data: any[]) => {
       console.log(data);
       this.pages = data;
@@ -33,3 +32,4 @@ export class AppComponent  implements OnInit{
     this.translate.use(language);
   }
 }
+

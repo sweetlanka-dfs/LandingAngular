@@ -1,69 +1,59 @@
 <header>
-  <div class="top-line">
-    <div class="row">
-    <nav class="navbar navbar-expand-lg navbar-light col-11">
-      <a class="navbar-brand logo" href="#">
-        SMS Termin
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div  class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ 'nav-menu.main' | translate }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ 'nav-menu.features' | translate }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ 'nav-menu.price' | translate }}</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{{ 'nav-menu.contact' | translate }}</a>
-          </li>
-        </ul>
-        <div class="buttons-auth">
-          <div class="row">
-          <button type="button" class="btn btn-auth">{{ 'nav-menu.sign-in' | translate }}</button>
-          <button type="button" class="btn btn-auth">{{ 'nav-menu.log-in' | translate }}</button>
-            </div>
-        </div>
-      </div>
-    </nav>
-          <div class="col-1 center">
-            <div class="dropdown center">
-              <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
-                RU<span class="caret"></span></button>
-              <ul class="dropdown-menu" (click)="checkData($event)">
-                <li *ngFor="let lang of languages">
-                  {{ lang }} </li>
-              </ul>
-            </div>
-          </div>
+<div class="toolbar-container row">
+  <nav class="navbar navbar-expand-lg navbar-light col-12">
+    <a class="navbar-brand logo order-lg-0" href="#">SMS Termin</a>
+        <span class="menu-spacer"></span>
+    <div class="dropdown order-lg-3">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+        {{ selectedLang | uppercase }}<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li *ngFor="let lang of languages" (click)="getLangValue($event)">
+          {{ lang | uppercase}} </li>
+      </ul>
     </div>
-  </div>
+    <button class="navbar-toggler order-lg-1" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{ 'nav-menu.main' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{ 'nav-menu.features' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{ 'nav-menu.price' | translate }}</a>
+        </li>
+        <li class="nav-item">
+           <a class="nav-link" href="#">{{ 'nav-menu.contact' | translate }}</a>
+        </li>
+      </ul>
+      <span class="menu-spacer-desktop"></span>
+      <span class="pull-center">
+      <button type="button" class="btn btn-auth">{{ 'nav-menu.sign-in' | translate }}</button>
+      <button type="button" class="btn btn-auth">{{ 'nav-menu.log-in' | translate }}</button>
+        </span>
+    </div>
+
+  </nav>
+</div>
   <div class="main-content">
-      <div class="flex-center">
-        <div class="row centered-content">
-          <div class="header-info col-12 col-lg-5">
-            <h1>Вы сталкивались с тем, что клиент не пришел? А ведь своевременно напомнить клиенту о визите может программа.</h1>
-          </div>
-          <div class="col-12 col-lg-7">
-            <div>
-              <img id="macbook" src="../../../assets/img/macbook.svg" alt="">
-            </div>
-          </div>
-        </div>
-
-          <div class="bottom-content">
-            <h2>Автоматизируйте свои бизнес-процессы сейчас</h2>
-            <button class="btn-start-now"><span>Начать сейчас</span></button>
-          </div>
-
+    <div class="row">
+      <div class="align-center col-md-5 col-sm-12 col-12">
+        <h1>{{ 'main-content.program' | translate }}</h1>
       </div>
-
+      <div class="col-md-7 col-sm-12 col-12">
+        <img id="macbook" src="../../../assets/img/macbook.svg" alt="Macbook">
+      </div>
+    </div>
+    <div class="row">
+      <div class="bottom-content col-12">
+        <h2>{{ 'main-content.automation' | translate }}</h2>
+        <button class="btn btn-start-now"><span>{{ 'main-content.start' | translate }}</span></button>
+      </div>
+    </div>
   </div>
 
 </header>

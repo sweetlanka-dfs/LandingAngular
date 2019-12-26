@@ -9,61 +9,36 @@
 </head>
 
 <body>
-    <div class="container-fluid custom-container-width">
-        <app-menu></app-menu>
-        <section>
-            <div class="row-cols-12">
-                <h2 class="headers-lg">Особенности</h2>
-                <div class="row space">
-                    <div class="col-lg-4 col-12">
-                        <img src="../assets/img/automation.svg" alt="">
-                    </div>
-                    <div class="col-lg-8 col-12 features-content">
-                        <h2 class="headers-sm">
-                            1. Автоматизация
-                        </h2>
-                        <span class="features-text">Наш календарь — полезная функция, которая поможет Вам вести учет поставленных персоналу задач и отслеживать ход их выполнения.</span>
-                    </div>
-                </div>
-                <div class="row reverse space">
-                    <div class="col-lg-4 col-12 pull-right">
-                        <img src="../assets/img/notifications.svg" alt="">
-                    </div>
-                    <div class="col-lg-8 col-12 features-content">
-                        <h2 class="headers-sm">
-                            2. Уведомление по SMS
-                        </h2>
-                        <span class="features-text">Наш календарь — полезная функция, которая поможет Вам вести учет поставленных персоналу задач и отслеживать ход их выполнения.</span>
-                    </div>
-                </div>
-                <div class="row space">
-                    <div class="col-lg-4 col-12">
-                        <img src="../assets/img/confidentiality.svg" alt="">
-                    </div>
-                    <div class="col-lg-8 col-12 features-content">
-                        <h2 class="headers-sm">
-                            3. Конфиденциальность </h2>
-                        <span class="features-text">Наш календарь — полезная функция, которая поможет Вам вести учет поставленных персоналу задач и отслеживать ход их выполнения.</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div>
-            <!-- translation: translation pipe -->
-            <h1>{{ 'demo.title' | translate }}</h1>
-
-            <!-- translation: directive (key as attribute)-->
-            <p [translate]="'demo.text'"></p>
-
-            <!-- translation: directive (key as content of element) -->
-            <p translate>demo.text</p>
+<!--    <div class="container-fluid custom-container-width">-->
+<div class="container container-sm">
+  <app-menu></app-menu>
+  <app-features></app-features>
+  <section>
+        <div class="row-cols-12">
+          <h2 class="headers-lg">Цены</h2>
         </div>
-        <button (click)="useLanguage('en')">en</button>
-        <button (click)="useLanguage('ru')">ru</button>
+        <div class="row">
+          <div class="col item" *ngFor="let page of pages">
+            <h3>{{ page.name }}</h3>
+            <div class="row">
+              <div class="col qty-sms">Количество СМС в месяц:</div>
+              <div class="col qty">{{ page.smsPerMonth +' СМС' }}</div>
+            </div>
+            <div class="row">
+              <div class="col price">
+                {{ page.price +' € / месяц' }}
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-start">{{ 'НАЧАТЬ'}}</button>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <app-contact-us></app-contact-us>
     </div>
-    <!--<div>{{ pages | json }}</div>-->
+  <app-footer></app-footer>
 
 
 </body>

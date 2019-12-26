@@ -1,7 +1,24 @@
 {
   "nav-menu": {
-    "main": "Main",
-    "text": "﻿Dies ist eine einfache Applikation um die Funktionen von ngx-transalte zu demonstrieren.",
-    "greeting": "Hallo {{name}}!"
+    "main": "Zuhause",
+    "features": "Registrierung",
+    "price": "Цены",
+    "contact":"Связаться с нами",
+    "sign-in": "Registrierung",
+    "log-in": "Einloggen"
+  },
+  "main-content": {
+    "program": "Sind Sie auf die Tatsache gestoßen, dass der Kunde nicht gekommen ist? Das Programm kann den Kunden jedoch umgehend an den Besuch erinnern.",
+    "automation": "Automatisieren Sie jetzt Ihre Geschäftsprozesse",
+    "start": "Fangen Sie jetzt an"
+  },
+  "features": {
+    "header": "Eigenschaften",
+    "automation": "1. Automatisierung",
+    "automation-description": "Unser Kalender ist eine nützliche Funktion, mit der Sie die den Mitarbeitern zugewiesenen Aufgaben verfolgen und deren Fortschritt verfolgen können.",
+    "notification": "2. SMS BenachrichtigungС",
+    "notification-description": "Erinnern Sie Ihre Kunden an den Termin. Benachrichtigen Sie über neue Aktionen oder Dienstleistungen.",
+    "confidentiality": "3. Vertraulichkeit",
+    "confidentiality-description": "Stellen Sie die Sicherheit Ihrer Daten sicher. Niemand hat Zugriff auf Ihre Kundendaten."
   }
 }

@@ -8,20 +8,32 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class MenuComponent implements OnInit {
 
-  selectedDay: string = '';
-  languages: any[] = ['RU', 'EN', 'DE'];
+  selectedLang = '';
+  userLang: string;
+  defaultLang: string;
+  languages: any[] = ['ru', 'en', 'de'];
 
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('ru');
+    const self = this;
+    self.userLang = navigator.language.split('-')[0];
+    if (self.userLang === 'ru') {
+      this.defaultLang = 'ru';
+    } else if (self.userLang === 'de'){
+      this.defaultLang = 'de';
+    } else {
+      this.defaultLang = 'en';
+    }
+    this.selectedLang = this.defaultLang;
+    translate.setDefaultLang(this.defaultLang);
   }
 
   ngOnInit() {
 
   }
-  checkData(event: any) {
-  debugger;
-    this.selectedDay = event.target.value;
-
+  getLangValue(event: any) {
+    const language = event.target.innerText;
+    this.selectedLang = language;
+    this.useLanguage(language.trim().toLowerCase());
   }
 
   useLanguage(language: string) {

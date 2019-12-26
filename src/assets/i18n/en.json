@@ -6,5 +6,19 @@
     "contact":"Contact Us",
     "sign-in": "Sign In",
     "log-in": "Log In"
+  },
+  "main-content": {
+    "program": "Sind Sie auf die Tatsache gestoßen, dass der Kunde nicht gekommen ist? Das Programm kann den Kunden jedoch umgehend an den Besuch erinnern.",
+    "automation": "Automatisieren Sie jetzt Ihre Geschäftsprozesse",
+    "start": "Fangen Sie jetzt an"
+  },
+  "features": {
+    "header": "Особенности",
+    "automation": "1. Автоматизация",
+    "automation-description": "Наш календарь - полезная функция, которая поможет Вам вести учет поставленых персоналу задач и отслеживать ход их выполнения.",
+    "notification": "2. Уведомление по СМС",
+    "notification-description": "Напоминайте своим клиентам о записе. Уведомляйте о новых акциях или услугах.",
+    "confidentiality": "3. Конфиденциальность",
+    "confidentiality-description": "Будьте уверены в защищенности ваших данных. Никто не имеет доступа к данным вашим клиентов."
   }
 }
