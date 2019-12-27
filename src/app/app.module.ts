@@ -13,7 +13,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ContactUsComponent } from './shared/contact-us/contact-us.component';
-import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatCardModule, MatFormFieldModule, MatInputModule} from '@angular/material';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -22,9 +22,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { FeaturesComponent } from './shared/features/features.component';
-
-
-
+import { CarousalComponent } from './shared/carousal/carousal.component';
+import { CarouselModule } from 'ngx-bootstrap';
+import { MaterialModule } from './shared/modules/material.module';
 
 
 @NgModule({
@@ -36,7 +36,8 @@ import { FeaturesComponent } from './shared/features/features.component';
     MenuComponent,
     FooterComponent,
     ContactUsComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    CarousalComponent
   ],
   imports: [
     BrowserModule,
@@ -46,6 +47,8 @@ import { FeaturesComponent } from './shared/features/features.component';
     NgbModule,
     FontAwesomeModule,
     HttpClientModule,
+    MaterialModule,
+    CarouselModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
@@ -60,7 +63,8 @@ import { FeaturesComponent } from './shared/features/features.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
