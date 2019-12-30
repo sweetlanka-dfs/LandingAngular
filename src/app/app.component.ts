@@ -11,7 +11,6 @@ import { ApiService } from './api.service';
 export class AppComponent  implements OnInit{
   pages: any[];
   title: string;
-  selectedLang: string;
 
   constructor(private translate: TranslateService, private api: ApiService) {
     translate.setDefaultLang('ru');

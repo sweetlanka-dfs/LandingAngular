@@ -1,5 +1,15 @@
 footer{
   background-color: #7E72F2;
+  a {
+    color: #FFFFFF;
+    font-size: 14px;	line-height: 24px;
+  }
+  .col {
+    padding: 10px;
+  }
+  .row {
+    padding: 0;
+  }
   .footer-context{
     color: #FFFFFF;
     font-size: 14px;
@@ -7,14 +17,6 @@ footer{
     padding: 10px;
     .img-container {
       padding: 0 10px;
-    }
-    a {
-      color: #FFFFFF;
-      font-size: 14px;	line-height: 24px;
-    }
-
-    .col {
-      padding: 10px;
     }
   }
 }

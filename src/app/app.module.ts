@@ -23,8 +23,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { FeaturesComponent } from './shared/features/features.component';
 import { CarousalComponent } from './shared/carousal/carousal.component';
-import { CarouselModule } from 'ngx-bootstrap';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MaterialModule } from './shared/modules/material.module';
+
 
 
 @NgModule({
@@ -45,10 +46,10 @@ import { MaterialModule } from './shared/modules/material.module';
     MatFormFieldModule,
     MatInputModule,
     NgbModule,
+    CarouselModule,
     FontAwesomeModule,
     HttpClientModule,
     MaterialModule,
-    CarouselModule.forRoot(),
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

@@ -1,108 +1,94 @@
-.mat-card {
-  background-color: none;
-}
-
-.carousal-main{
-  position: absolute;
-  margin-top: 100px;
-}
-.example-card {
-  max-width: 100%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  box-shadow: 0 3px 6px rgba(#ACC0E9,.5);
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
-.card{
-  display: inline-block;
-  background: #FFF;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  position: relative;
-
-}
-.carousel-item{
-  height: 500px;
-  width: 100%;
-  position: relative;
-  background-color:white;
-
-}
-.mat-parent {
-  background-color:white;
-  margin-top: 6%;
-  width: 100%;
-  margin-left: 10%;
-}
-.mat-parent-small{
-  display: none;
-}
-/*for ipad and other lage tabs*/
-@media only screen and (max-width: 768px) {
-  .mat-parent-small{
-    display: block;
+section {
+  .row {
+    padding: 10px;
   }
-  .mat-parent{
-    display: none;
+  h2 {
+    color: #6F64F8;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    padding-bottom: 100px;
   }
-  .mat-parent-small {
-    background-color:white;
-    margin-top: 19%;
-    width: 96%;
-    margin-left: 2%;
-    position: relative;
-    height: 660px;
-    padding-bottom: 10%;
-
-  }
-  .carousel-item{
-    height: 596px;
+}
+.item {
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.14);
+  h3 {
     width: 100%;
-    position: relative;
-    background-color:white;
+    color: #606060;
+    font-weight: 600;
+    font-size: 17px;
+    padding-top: 5px;
+    //line-height: 22px;
+    text-align: center;
+  }
+
+  .qty-sms {
+    color: #606060;
+    font-weight: 600;
+    font-size: 12px;
+    //line-height: 15px;
+  }
+
+  .qty {
+    color: #6F64F8;
+    font-weight: 600;
+    font-size: 14px;
+    //line-height: 18px;
+    text-align: center;
+  }
+
+  .price {
+    color: #2DCD7A;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    //padding: 20px 10px;
+  }
+
+  .btn-start {
+    height: 36px;
+    width: 136px;
+    border-radius: 4px;
+    background: linear-gradient(224.53deg, #9E94FF 0%, #7E72F2 100%);
+    box-shadow: -1px 1px 8px 0 rgba(126, 114, 242, 0.58);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 12px;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  section{
+  }
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+  section {
+  }
+
+}
+@media screen and (max-width: 576px) {
+  section {
 
   }
-  .example-card {
-    max-width: 100%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    box-shadow: 0 3px 6px rgba(#ACC0E9,.5);
-  }}
-/*for mobile devices*/
-@media only screen and (max-width: 500px) {
-  .mat-parent-small{
-    display: block;
-  }
-  .mat-parent{
-    display: none;
-  }
-  .mat-parent-small {
-    background-color:white;
-    margin-top: 19%;
-    width: 96%;
-    margin-left: 2%;
-    position: relative;
-    height: 440px;
-    padding-bottom: 10%;
-    /*background-image: url("/assets/img/bg1.jpg");*/
-  }
-  .carousel-item{
-    height: 385px;
-    width: 100%;
-    position: relative;
-    background-color:white;
-
-  }
-  .example-card {
-    max-width: 100%;
-    margin-top: 1%;
-    margin-bottom: 1%;
-    box-shadow: 0 3px 6px rgba(#ACC0E9,.5);
+}
+@media screen and (max-width: 400px) {
+  section {
+    h2 {
+      font-size: 30px;
+    }
   }
 }
